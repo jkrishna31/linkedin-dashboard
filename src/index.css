@@ -1,0 +1,56 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --fg-primary: rgb(15, 18, 20);
+  --fg-sec: rgb(53, 59, 64);
+  --fg-tertiary: rgb(66, 68, 69);
+  --bg-primary: #ffffff;
+  --bg-sec: rgb(216, 216, 216);
+  --bg-tertiary: rgb(184, 184, 184);
+  --blue-1: 66, 157, 249;
+  --shimmer: 210, 212, 213;
+
+  color: var(--fg-primary);
+  background-color: var(--bg-primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg-primary: rgb(252, 252, 252);
+    --fg-sec: rgb(197, 197, 197);
+    --fg-tertiary: rgb(127, 127, 127);
+    --bg-primary: rgb(29, 29, 29);
+    --bg-sec: rgb(48, 48, 48);
+    --bg-tertiary: rgb(18, 18, 18);
+    --blue-1: 66, 157, 249;
+    --shimmer: 70, 72, 74;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+}

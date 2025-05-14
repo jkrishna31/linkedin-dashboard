@@ -1,0 +1,73 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--fg-primary);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: fit-content;
+}
+
+.photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.authorDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  min-width: 200px;
+  height: 25px;
+  margin-bottom: .5rem;
+  border-radius: 50px;
+}
+
+.headline {
+  max-width: 100px;
+  height: 18px;
+  flex-shrink: 0;
+  border-radius: 50px;
+}
+
+.postContainer {
+  margin-bottom: 0.8rem;
+  min-height: 200px;
+  width: 100%;
+}
+
+.postStats {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.statItem {
+  border-radius: 50px;
+  min-height: 30px;
+  width: 100%;
+  max-width: 50px;
+}
+
+.date {
+  border-radius: 50px;
+  min-height: 30px;
+  max-width: 160px;
+  width: 100%;
+  margin-left: auto;
+}

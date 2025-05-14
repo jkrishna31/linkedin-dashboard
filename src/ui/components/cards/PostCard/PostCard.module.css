@@ -1,0 +1,66 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.postContainer {
+  margin-bottom: .8rem;
+}
+
+.postStats {
+  display: flex;
+  gap: .5rem;
+}
+
+.separator {
+  color: var(--fg-tertiary);
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.statIcon {
+  width: 18px;
+  height: 18px;
+  color: var(--fg-sec);
+}
+
+.postDate {
+  margin-left: auto;
+  color: var(--fg-sec);
+}
+
+.othersInfo {
+  margin-top: .5rem;
+}
+
+.linkedinLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.linkedinLink>svg {
+  width: 14px;
+  height: 14px;
+}
+
+.sharedPostContainer {
+  margin-top: .5rem;
+  border: 1px solid var(--fg-tertiary);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.gallery {
+  margin-top: .5rem;
+}

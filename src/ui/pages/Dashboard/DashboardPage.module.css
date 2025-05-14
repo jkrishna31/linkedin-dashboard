@@ -1,0 +1,49 @@
+.page {
+  width: fit-content;
+  min-height: 100vh;
+  margin-inline: auto;
+
+  display: flex;
+  gap: 3rem;
+
+  padding: 2rem;
+}
+
+.postsSection {
+  max-width: 800px;
+}
+
+.sectionHeader {
+  margin-bottom: 2rem;
+  position: sticky;
+  top: 2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  z-index: 9999;
+}
+
+.filter {
+  font-size: 1rem;
+  min-height: 40px;
+  background-color: var(--bg-sec);
+  padding: 0.6rem 0.8rem;
+  border-color: transparent;
+  border-radius: 8px;
+}
+
+.flexVerticalList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sideSection {
+  max-width: 500px;
+}
+
+.sideSection h2 {
+  margin-bottom: 2rem;
+}

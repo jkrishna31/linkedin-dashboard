@@ -1,0 +1,34 @@
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--fg-primary);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: fit-content;
+}
+
+.authorInfo:hover {
+  color: rgb(var(--blue-1));
+}
+
+.photoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--bg-sec);
+  overflow: hidden;
+}
+
+.photoContainer img {
+  object-fit: cover;
+}
+
+.authorDetails p {
+  font-size: 14px;
+}
