@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from "react";
-import { dummyPostsResponse } from "../../dummy/posts";
 
 export default function useFetchPosts<T>(url: string, body?: object) {
   const [isLoading, setIsLoading] = useState(false);
@@ -9,29 +8,24 @@ export default function useFetchPosts<T>(url: string, body?: object) {
   const fetchPosts = useCallback(async () => {
     try {
       setIsLoading(true);
-      // const res = await fetch(url, {
-      //   method: "post",
-      //   headers: {
-      //     'X-RapidAPI-Key': import.meta.env.VITE_RAPID_API_KEY,
-      //     'Content-Type': 'application/json'
-      //   },
-      //   body: JSON.stringify(body)
-      // });
-      // const json = await res.json();
-      // setData(json.data);
-      // setError(null);
-      setTimeout(() => {
-        setData(dummyPostsResponse.data)
-        setError(null);
-        setIsLoading(false);
-      }, 5000);
+      const res = await fetch(url, {
+        method: "post",
+        headers: {
+          'X-RapidAPI-Key': import.meta.env.VITE_RAPID_API_KEY,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body)
+      });
+      const json = await res.json();
+      setData(json.data);
+      setError(null);
     } catch (err) {
       setError(err);
       setData(null);
     } finally {
-      // setIsLoading(false);
+      setIsLoading(false);
     }
-  }, []);
+  }, [body, url]);
 
   useEffect(() => {
     fetchPosts();
