@@ -12,7 +12,7 @@ const VideoGallary = ({ videos, className }: VideoGallaryProps) => {
       {
         videos?.map((video: IVideo) => (
           <video
-            width="280" height="200" controls
+            width="250" height="180" controls
             poster={video.poster}
             className={styles.videoPlayer}
           >

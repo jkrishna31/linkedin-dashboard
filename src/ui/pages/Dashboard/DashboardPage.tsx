@@ -25,7 +25,26 @@ const DashboardPage = () => {
 
   const top3EngagingPost = useMemo(() => {
     const items = (data as unknown as { items: IPost[] })?.items;
-    return items?.slice(0, 3);
+    if (!items?.length) return [];
+    const top = [];
+    for (const obj of items) {
+      // Insert in the correct position
+      let inserted = false;
+      for (let i = 0; i < top.length; i++) {
+        if (obj.socialActivityCountsInsight.totalReactionCount > top[i]?.socialActivityCountsInsight.totalReactionCount) {
+          top.splice(i, 0, obj);
+          inserted = true;
+          break;
+        }
+      }
+      if (!inserted && top.length < 3) {
+        top.push(obj);
+      }
+      if (top.length > 3) {
+        top.pop();
+      }
+    }
+    return top;
   }, [data]);
 
   const filteredPosts = useMemo(() => {

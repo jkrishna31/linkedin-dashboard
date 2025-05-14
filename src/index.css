@@ -10,14 +10,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --breakpoint-md: 768px;
+
   --fg-primary: rgb(15, 18, 20);
-  --fg-sec: rgb(53, 59, 64);
-  --fg-tertiary: rgb(66, 68, 69);
+  --fg-sec: rgb(75, 78, 80);
+  --fg-tertiary: rgb(109, 113, 115);
   --bg-primary: #ffffff;
-  --bg-sec: rgb(216, 216, 216);
-  --bg-tertiary: rgb(184, 184, 184);
+  --bg-sec: rgb(238, 238, 238);
+  --bg-tertiary: rgb(231, 231, 231);
   --blue-1: 66, 157, 249;
-  --shimmer: 210, 212, 213;
+  --shimmer: 255, 255, 255;
 
   color: var(--fg-primary);
   background-color: var(--bg-primary);

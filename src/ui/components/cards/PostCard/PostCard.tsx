@@ -66,7 +66,7 @@ const PostCard = ({
             <div className={styles.sharedPostContainer}>
               <UserCard user={{
                 fullName: `${post.resharedPost.author?.firstName} ${post.resharedPost.author?.lastName}`,
-                headline: post.author?.username,
+                headline: `@${post.resharedPost.author?.username}`,
                 url: post.resharedPost.author?.url,
               }} />
               {
